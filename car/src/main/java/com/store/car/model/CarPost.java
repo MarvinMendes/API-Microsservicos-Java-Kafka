@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "TBL_CAR_POST")
 @Data
@@ -36,7 +38,7 @@ public class CarPost {
     private String city;
 
     @Column(name = "car_created")
-    private String createdDate;
+    private Date createdDate;
 
     @Column(name = "car_post_contact")
     private String contact;
