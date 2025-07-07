@@ -3,6 +3,7 @@ package com.portal.api.client;
 import com.portal.api.dto.CarPostDto;
 import com.portal.api.dto.OwnerPostDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -17,8 +18,8 @@ public class CarPostStoreClient {
     private final String USER_STORE_SERVICE_URI = "http://localhost:8080/user";
     private final String POST_STORE_SERVICE_URI = "http://localhost:8080/sales";
 
-    @Autowired
-    RestTemplate restTemplate;
+    @Autowired(required = true)
+    private RestTemplate restTemplate;
 
 
     public List<CarPostDto> carForSaleClient() {
